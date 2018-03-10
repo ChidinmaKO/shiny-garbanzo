@@ -1,0 +1,12 @@
+.media{
+    background-color: #00f;
+    padding: 10px;
+    height: 100px;
+    &__avatar{
+        margin: 0;
+        color: #000;
+    }
+    &--disabled{
+        font-size: 10px;
+    }
+}
