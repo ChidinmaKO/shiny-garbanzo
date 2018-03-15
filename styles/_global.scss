@@ -1,0 +1,60 @@
+// global
+
+* {
+  box-sizing: border-box;
+}
+
+a, a:hover {
+  text-decoration:none;
+  color:rgb(0,0,0);
+}
+
+body {
+  font-family:$primaryFont;
+  font-size:$fontBaseline;
+  color:$fontColor;
+  position: relative;
+}
+
+.container{
+  margin: 0 auto;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+
+  &.container--floating{
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    max-width: 100%;
+    top: 0px;
+    left: 0;
+    z-index: 9;
+    >div{
+      padding: 0 15px;
+    }
+  }
+}
+
+// desktop
+
+@media only screen and (min-width: 768px) {
+  .container{
+    margin-left: 15px;
+    margin-right: 15px;
+
+    max-width: none;
+    width: auto;
+
+    &.container--floating{ // For the fixed navigation requirement.
+      >div{
+        padding: 0 30px; // to compensate for the 15px margin on the desktop
+      }
+    }
+  }
+}
+

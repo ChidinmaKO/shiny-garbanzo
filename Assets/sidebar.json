@@ -1,0 +1,28 @@
+[{
+    "label": "The Myth",
+    "options": [{
+      "1": "How it Happened",
+      "2": "What came before",
+      "3": "What Remains"
+    }]
+  },
+
+  {
+    "label": "The Magic",
+    "options": [{
+      "1": "Main Characters",
+      "2": "The Spell",
+      "3": "Props"
+    }]
+  },
+
+  {
+    "label": "About Bananas",
+    "options": [{
+      "1": "Where to find them",
+      "2": "Vitamins and Nutrition",
+      "3": "How to eat thems"
+    }]
+  }
+
+]

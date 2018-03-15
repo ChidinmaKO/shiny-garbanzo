@@ -1,12 +1,312 @@
-.media{
-    background-color: #00f;
-    padding: 10px;
-    height: 100px;
-    &__avatar{
-        margin: 0;
-        color: #000;
+.header{
+  display: flex;
+  flex-direction:row;
+  align-items:center;
+  background: $white;
+  z-index: 9;
+  
+  @media only screen and (min-width: 768px) {
+    justify-content:space-between;
+  }
+  
+
+  .header__sideMenuTrigger {
+    width: 20%;
+    
+
+    a{
+      display: flex;
+      flex-direction:row;
+      align-items:center;
+      font-weight: bold;
+      color: inherit;
+      margin-right: 20px;
+
+      .header__sideMenuTrigger__icon{
+        
+        @media only screen and (min-width: 768px) {
+          margin-right: 10px;  
+        }
+      }
+
+      .header__sideMenuTrigger__text{
+        display: none;
+        
+        @media only screen and (min-width: 768px) {
+          display: block;
+        }
+      }
+
+      @media only screen and (min-width: 768px) { margin-right: 0px; }
     }
-    &--disabled{
-        font-size: 10px;
+
+
+  }
+  
+  .header__logo{
+    padding: 10px 0;
+    min-width: 50%;
+    text-align: center;
+
+    img{
+      width: 160px; 
+
+      @media only screen and (min-width: 768px) {
+        width: 200px;  
+      }
     }
+  }
+
+  .header__mainNavigation{
+    display: none; // Disabled it for mobile;
+    
+    ul{
+      li{
+        display: inline-block;
+        margin-left: 20px;
+      }
+    }
+    @media only screen and (min-width: 768px) {
+      display: block;
+
+
+    }
+  }
 }
+
+
+
+.quoteWrapper{
+  padding-top: 90px;
+  color: $white;
+
+  .quote{
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+
+    .quote__image{
+      background-size: cover;
+      background-position: center center;
+      width: 100%;
+      height: 100%;
+    }
+
+    .quote__underlay{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0; left: 0;
+      background: rgba(0,0,0,0.16);
+    }
+
+    .quote__text{
+      position: absolute;
+      z-index: 2;
+      width: 80%;
+      bottom: 5%;
+      left: 5%;
+
+      @media only screen and (min-width: 768px) {
+        top: 50%;
+        margin-top: -50px;
+        left: 5%;
+        width: 500px;
+      }
+
+
+      h3{
+        margin: 0 auto;
+        font-weight: 200;
+        font-size: 1.8em;
+        margin-bottom: 15px;
+        @media only screen and (min-width: 768px) {
+          font-size: 2.4em;
+        }
+      }
+
+      .quote__text--circle{}
+
+      // Still haven't cracked the circle thing yet. There are tutorials: 
+      // https://css-tricks.com/forums/topic/perfectly-fit-text-within-css-circle/
+      // https://codepen.io/nuriarai/pen/uIrFf
+      // 
+      // .quote__text--circle{
+      //   padding-top: 50%;
+      //   height: 300px;
+      //   text-align: center;
+      //   width: 300px;
+      //   position: absolute;
+
+      //   &:after {
+      //       content: "";
+      //       display: block;
+      //       width: 100%;
+      //       height:0;
+      //       position: relative;
+      //       top: 0;
+      //       left: 0;
+      //       padding-bottom: 100%;
+      //       border: 2px solid $white;
+      //       -moz-border-radius: 50%; 
+      //       -webkit-border-radius: 50%; 
+      //       border-radius: 50%;
+      //   }
+      // }
+    }
+  }
+}
+
+
+
+.theRecipe{
+  border-top: 1px solid rgba(0,0,0,0.5);
+
+  .theRecipe__title{
+    text-align: center;
+  }
+  .theRecipe__description{
+    border-top: 1px dashed rgba(0,0,0,0.5);
+    border-bottom: 1px dashed rgba(0,0,0,0.5);
+    padding: 20px 15px;
+
+    @media only screen and (min-width: 768px) {
+      padding: 30px 15%;
+    }
+    
+    .theRecipe__description__list{
+      margin: 0; padding: 0;
+
+      li {
+        list-style-type: none;
+        padding: 10px 5px;
+
+        @media only screen and (min-width: 768px) {
+          display: inline-block;
+          padding: 10px 5px;
+          width: calc(50% - 10px); // The 10px is from the padding (left & right)
+        }
+      }
+    }
+  
+  }
+
+  .theRecipe__steps{
+    
+    @media only screen and (min-width: 768px) {
+      width: 70%;  
+      text-align: center;
+    }
+    margin: 0 auto;
+    
+
+    .theRecipe__steps__item{
+      margin-bottom: 20px;
+
+      .theRecipe__steps__item__number{
+        background: $yellow;
+        font-weight: bold;
+        display: block;
+        margin: 0 auto;
+        border: 2px solid;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 50%;
+        text-align: center;
+      }
+    }
+  }
+
+  .theRecipe__steps__tip{
+    font-size: .8em;
+    border-top: 1px dashed rgba(0,0,0,0.5);
+    padding: 20px 0;
+
+    .theRecipe__steps__tip__tip{
+      text-align: center;
+    }
+  }
+}
+
+footer{
+  border-top: 1px solid darken($gray, 10);
+  background: $gray;
+  padding: 20px 0; 
+
+  .footer__social.container{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media only screen and (min-width: 620px){
+      display: flex;
+      flex-direction: row;
+      justify-content:space-between;
+    }
+
+    .footer__social__heading{
+      text-transform: uppercase;
+      font-style: italic;
+      font-weight: 200;
+      font-size: 1em;
+      @media only screen and (min-width: 620px){
+        
+      }
+    }
+    .footer__social__links{
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      .footer__social__links__item{
+        margin-right: 1.5em;
+        @media only screen and (min-width: 620px){
+          margin-right: 26px;
+          flex: 0 1 auto;
+        }
+      }
+    }
+  }
+
+  .footer__bottom.container{
+    border-top: 1px solid rgba(0,0,0,0.8);
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    @media only screen and (min-width: 640px){
+      flex-direction: row;
+      font-size: 8px;
+      justify-content:center;
+      font-weight: 600;
+    }
+    .footer__copyright{
+      flex: 0 1 auto;
+    }
+
+    .footer__navigation{
+      .footer__navigation__links{
+        list-style: none;
+        padding-bottom: 20px;
+        text-align: center;
+        @media only screen and (min-width: 640px){
+          display: flex;
+          flex-direction: row;
+          padding-bottom: 0;
+          margin: 0;
+          padding: 0;
+        }
+
+        .footer__navigation__links__item{
+          padding: 20px 0;
+          @media only screen and (min-width: 640px){
+            margin: 0 14px;
+            flex:0 1 auto;
+          }
+        }
+      }
+    }
+  }
+
+}
+

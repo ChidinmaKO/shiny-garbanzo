@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,22 +10,241 @@
     <meta name="keywords" content="banana, banana bread, recipes, breakfast, healthy breakfast, " />
     <meta name="author" content="Chidinma K." />
     <link rel="stylesheet" type="text/css" href="dist/css/app.css" />
-  </head>
-  <body>
-      <div class="bcontainer">
-          <div class="nav_container">
-              <nav class="bnav" id="nav">
-                  <ul class="blist">
-                      <li class="bitem">Menu</li>
-                      <li class="bitem">Contact</li>
-                      <li class="bitem">Login</li>
-                  </ul>
-              </nav>
-          </div>
-          <div class="media">
-              <h2>Hello!</h2>
-              <p>jfjdnfjnj</p>
-          </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="dist/js/app.js"></script>
+</head>
+
+<body>
+
+  <div class="wrapper">
+    
+    <!-- Sidebar navigation -->
+    <div class="sideNavigation">
+      <div class="header__sideNavTrigger">
+          <a href="#">
+            <span class="header__sideNavTrigger__icon">
+              <svg width="29px" height="23px" viewBox="0 0 29 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true">
+                <defs></defs>
+                <g id="page" stroke="none" stroke-width="1" fill-rule="evenodd">
+                    <g id="homepage_stickymenu" transform="translate(-35.000000, -34.000000)" >
+                        <path d="M35,53.2068966 L63.4482759,53.2068966 L63.4482759,57 L35,57 L35,53.2068966 Z M35,44.1034483 L58.2758621,44.1034483 L58.2758621,47.8965517 L35,47.8965517 L35,44.1034483 Z M35,34 L63.4482759,34 L63.4482759,37.7931034 L35,37.7931034 L35,34 Z" id="combinedshapecopy"></path>
+                    </g>
+                </g>
+            </svg>
+          </span>
+            <span class="sideNavTrigger__text">Close</span>
+          </a>
+        </div>
+
+      <div class="sideNavigation__group">
+        <h4>The Myth</h4>
+        <ul class="sideNavigation__group__list">
+          <li class="sideNavigation__group__item"><a href="">How it happened</a></li>
+          <li class="sideNavigation__group__item"><a href="">What came before</a></li>
+          <li class="sideNavigation__group__item"><a href="">What remains</a></li>
+        </ul>
+
+        <h4>The Magic</h4>
+        <ul class="sideNavigation__group__list">
+          <li class="sideNavigation__group__item"><a href="">Main Characters</a></li>
+          <li class="sideNavigation__group__item"><a href="">The Spell</a></li>
+          <li class="sideNavigation__group__item"><a href="">Props</a></li>
+        </ul>
+
+        <h4>About Bananas</h4>
+        <ul class="sideNavigation__group__list">
+          <li class="sideNavigation__group__item"><a href="">Where to find them</a></li>
+          <li class="sideNavigation__group__item"><a href="">Vitamins and Nutrition</a></li>
+          <li class="sideNavigation__group__item"><a href="">How to eat them</a></li>
+        </ul>
+
+
       </div>
-      <footer></footer>
-  </body>
+    </div>
+    <!-- /End: Sidebar navigation -->
+
+
+    <!-- Main Header 
+
+        TODO: - Make sure it's floating
+    -->
+    <header class="container container--floating">
+      <div class="header">
+        <div class="header__sideMenuTrigger">
+          <a href="#">
+            <span class="header__sideMenuTrigger__icon"><img src="assets/images/Menu_icon.svg" alt=""></span>
+            <span class="header__sideMenuTrigger__text">Menu</span>
+          </a>
+        </div>
+
+        <div class="header__logo">
+          <img src="assets/images/BB_Logo.svg" alt="Banana Bread Logo">
+        </div>
+
+        <div class="header__mainNavigation">
+          <ul>
+            <li class="mainNavigation__item"><a href="">Contact</a></li>
+            <li class="mainNavigation__item"> 
+              <a href="#" class="mainNavigation__trigger"> Login </a>
+              <!-- Modal -->
+              
+              <div class="modal">
+                <form class="modal__content modal__form" action="">
+                  <div class="head__container">
+                    <h4>Login Form</h4>
+                    <span class="modal__content--close" title="Close Modal">&times;</span>
+                  </div>
+                  <div class="modal__content__container container__first">
+                    <label for="email"><b>Email</b></label>
+                    <input type="email" placeholder="Enter Email" name="email" required>
+
+                    <label for="password"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="password" required>
+
+                    <button class="loginbtn" type="submit">Login</button>
+                    <label>
+                      <input type="checkbox" checked="checked" name="remember"> Remember Me
+                    </label>
+                  </div>
+
+                  <div class="modal__content__container container__second">
+                    <button type="button" class="cancel__btn">Cancel</button>
+                    <span class="password"><a href="#">Forgot Password?</a></span>
+                  </div>
+                </form>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- /End: Main Header -->
+
+    <!-- Main Section -->
+    <section class="quoteWrapper container">
+      
+      <div class="quote">
+        <div class="quote__text">
+          <h3>"Why compromise the banana flavour?"</h3>
+          <span class="quote__source">Moses | Mozambique | 6 years old</span>
+        </div>
+        <div class="quote__underlay"></div>
+        <div class="quote__image" style="background-image: url(assets/images/Mozes.png);"></div>
+        <!-- I am using background images because it's better for responsiveness. It is not great for accessibility but it's not something to worry about right now. -->
+      </div>
+
+      <div class="quote">
+        <div class="quote__text quote__text--right">
+          <div class="quote__text--circle">
+            <h3>This banana bread is moist and delicious with loads of banana flavor!</h3>
+            <span class="quote__source">Raoul | Indonesia | 3 years old</span>
+          </div>
+        </div>
+        <div class="quote__underlay"></div>
+        <div class="quote__image" style="background-image: url(assets/images/Raoul.png);"></div>
+      </div>
+
+
+      <div class="quote">
+        <div class="quote__text quote--italics">
+          <h3>"It is a wonderful standard recipe that you can build upon and customize to your liking."</h3>
+          <span class="quote__source">King | Kenya | 8 years old</span>
+        </div>
+        <div class="quote__underlay"></div>
+        <div class="quote__image" style="background-image: url(assets/images/King.png);"></div>
+      </div>
+
+
+    </section>
+
+    <section class="theRecipe container">
+      <div class="theRecipe__title">
+        <h1>The Recipe</h1>
+        <span>Prep: 15min | Cook: 1h5m</span>
+
+        <h4>What you need</h4>
+      </div>
+      
+      <div class="theRecipe__description">
+        <ul class="theRecipe__description__list">
+          <li>2 cups all-purpose flour</li>
+          <li>3/4 cup brown sugar</li>
+          <li>1 teaspoon baking soda</li>
+          <li>2 eggs, beaten</li>
+          <li>1/4 teaspoon salt</li>
+          <li>2 1/3 cups mashed overripe bananas</li>
+          <li>1/2 cup butter</li>
+          <li>1 cup of love and care</li>
+        </ul>  
+      </div>
+      
+      
+      <div class="theRecipe__title">
+        <h4>How to make it</h4>
+      </div>
+
+      <div class="theRecipe__steps">
+        <div class="theRecipe__steps__item">
+          <span class="theRecipe__steps__item__number">1</span>
+          <p>Preheat oven to 350 degrees F (175 degrees C). Lightly grease a 9x5 inch loaf pan.</p>  
+        </div>
+
+        <div class="theRecipe__steps__item">
+          <span class="theRecipe__steps__item__number">2</span>
+          <p>In a large bowl, combine flour, baking soda and salt. In a separate bowl, cream together butter and brown sugar. Stir in eggs and mashed bananas until well blended. Stir banana mixture into flour mixture; stir just to moisten. Pour batter into prepared loaf pan.</p>  
+        </div>
+        
+        <div class="theRecipe__steps__item">
+          <span class="theRecipe__steps__item__number">3</span>
+          <p>Bake in preheated oven for 60 to 65 minutes, until a toothpick inserted into center of the loaf comes out clean. Let bread cool in pan for 10 minutes, then turn out onto a wire rack</p>  
+        </div>
+      </div>
+      <div class="theRecipe__steps__tip">
+        <p class="theRecipe__steps__tip__tip">Tip: Aluminum foil can be used to keep food moist, cook it evenly and make clean up easier.</p>
+      </div>
+
+    </section>
+
+  </div>
+
+  <footer class="footer">
+    <div class="footer__social container">
+      <h4 class="footer__social__heading">Follow Us On:</h4>
+      <ul class="footer__social__links footer__social__links--right">
+        <li class="footer__social__links__item">
+          <a href="" target="_blank"><img src="assets/images/Facebook.svg" alt=""></a>
+        </li>
+        <li class="footer__social__links__item">
+          <a href="" target="_blank"><img src="assets/images/Youtube.svg" alt=""></a>
+        </li>
+        <li class="footer__social__links__item">
+          <a href="" target="_blank"><img src="assets/images/Twitter.svg" alt=""></a>
+        </li>
+        <li class="footer__social__links__item">
+          <a href="" target="_blank"><img src="assets/images/Pinterest.svg" alt=""></a>
+        </li>
+        <li class="footer__social__links__item">
+          <a href="" target="_blank"><img src="assets/images/Instagram.svg" alt=""></a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer__bottom container">
+      <div class="footer__copyright">
+        <p>Copyright ©  2017 Bananabread inc. <span class="footer-rights">All rights reserved </span></p>
+      </div>
+      <div class="footer__navigation">
+        <ul class="footer__navigation__links">
+          <li class="footer__navigation__links__item"><a href="" rel="nofollow">Privacy Policy</a></li>
+          <li class="footer__navigation__links__item"><a href="" rel="nofollow">Cookie Policy</a></li>
+          <li class="footer__navigation__links__item"><a href="" rel="nofollow">Terms of Use</a></li>
+          <li class="footer__navigation__links__item"><a href="" rel="nofollow">Terms &#38; Conditions</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+</body>

@@ -18,6 +18,8 @@
   },
   "devDependencies": {
     "browser-sync": "^2.23.6",
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0",
+    "node-normalize-scss": "^3.0.0"
   }
 }
